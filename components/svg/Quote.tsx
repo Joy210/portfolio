@@ -1,6 +1,13 @@
-const Quote = () => {
+import { FC } from "react";
+
+type QuoteProps = {
+  className?: string;
+};
+
+const Quote: FC<QuoteProps> = ({ className }) => {
   return (
     <svg
+      className={className}
       width="64"
       height="64"
       viewBox="0 0 64 64"

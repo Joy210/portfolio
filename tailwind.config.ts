@@ -15,6 +15,12 @@ const config: Config = {
       },
 
       container: {
+        // you can configure the container to be centered
+        center: true,
+
+        // or have default horizontal padding
+        padding: "1rem",
+
         screens: {
           mobile: "600px",
           tablet: "900px",

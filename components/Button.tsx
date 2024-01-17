@@ -13,10 +13,7 @@ const ButtonLink: FC<ButtonProps> = ({ url, name, isIcon, isLarge }) => {
     <Link
       href={url}
       target="_blank"
-      className={`group ml-2 font-normal bg-slate-900 text-white rounded-full inline-flex items-center hover:bg-indigo-500 ease-in-out duration-300 transform translate-y-0 hover:-translate-y-1
-
-
-      ${
+      className={`group ml-2 font-normal bg-slate-900 text-white rounded-full inline-flex items-center hover:bg-indigo-500 ease-in-out duration-300 transform translate-y-0 hover:-translate-y-1 ${
         isIcon === true
           ? isLarge === true
             ? buttonProperty.lg
@@ -24,9 +21,7 @@ const ButtonLink: FC<ButtonProps> = ({ url, name, isIcon, isLarge }) => {
           : isLarge === true
           ? "h-14 px-8 text-[18px]"
           : "h-12 px-6"
-      }
-      
-        `}
+      }`}
     >
       <span> {name} </span>
 

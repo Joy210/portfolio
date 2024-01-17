@@ -27,11 +27,11 @@ const GlobalWork = () => {
         </div>
 
         <div className="text-slate-300 mx-auto text-center text-[3.5rem] font-extrabold leading-tight uppercase">
-          <h3> Collaborating </h3>
-          <h3>
+          <h2> Collaborating </h2>
+          <h2>
             Across <span className="text-slate-900"> {cityCount}+ Global </span>
-          </h3>
-          <h3 className="text-slate-900"> Destinations </h3>
+          </h2>
+          <h2 className="text-slate-900"> Destinations </h2>
         </div>
       </div>
     </div>

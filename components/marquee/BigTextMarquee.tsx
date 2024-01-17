@@ -2,8 +2,8 @@ import { marqueeTextsBig } from "../data/marqueeTextData";
 
 const BigTextMarquee = () => {
   return (
-    <div className="leading-none">
-      <div className="relative flex overflow-x-hidden text-8xl uppercase font-semibold space-x-4 text-slate-200">
+    <div className="leading-none -space-y-4">
+      <div className="relative flex overflow-x-hidden text-5xl md:text-8xl uppercase font-semibold space-x-4 text-slate-200">
         <div className="py-4 animate-slidtoleft whitespace-nowrap flex items-center gap-4 ">
           {marqueeTextsBig.map((text, i) => {
             return (
@@ -31,7 +31,7 @@ const BigTextMarquee = () => {
         </div>
       </div>
 
-      <div className="relative flex overflow-x-hidden text-8xl uppercase font-semibold space-x-4 text-slate-200">
+      <div className="relative flex overflow-x-hidden text-5xl md:text-8xl uppercase font-semibold space-x-4 text-slate-200">
         <div className="py-4 animate-slidetoright whitespace-nowrap flex items-center gap-4 ">
           {marqueeTextsBig.map((text, i) => {
             return (

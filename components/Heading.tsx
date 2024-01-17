@@ -8,8 +8,8 @@ type TextColorProps = {
 
 const Heading: FC<TextColorProps> = ({ bgDark, text1, text2 }) => {
   return (
-    <div className="heading uppercase text-9xl leading-none font-extrabold">
-      <h1
+    <div className="title">
+      <div
         className={`bg-gradient-to-b inline-block text-transparent bg-clip-text ${
           bgDark === true
             ? "from-slate-800 to-slate-950"
@@ -17,10 +17,10 @@ const Heading: FC<TextColorProps> = ({ bgDark, text1, text2 }) => {
         }`}
       >
         {text1}
-      </h1>
-      <h1 className={`${bgDark === true ? "text-white" : "text-slate-900"}`}>
+      </div>
+      <div className={`${bgDark === true ? "text-white" : "text-slate-900"}`}>
         {text2}
-      </h1>
+      </div>
     </div>
   );
 };

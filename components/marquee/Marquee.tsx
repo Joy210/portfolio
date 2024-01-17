@@ -3,7 +3,7 @@ import { marqueeTexts } from "../data/marqueeTextData";
 const Marquee = () => {
   return (
     <div className="relative flex overflow-x-hidden text-base uppercase font-semibold space-x-4 bg-indigo-500 text-white">
-      <div className="py-6 animate-marquee whitespace-nowrap flex items-center gap-4">
+      <div className="py-4 md:py-6 animate-marquee whitespace-nowrap flex items-center gap-4">
         {marqueeTexts.map((text, i) => {
           return (
             <span key={i} className="flex items-center gap-4">

@@ -31,3 +31,67 @@ body {
 .lh-120 {
   line-height: 1.2;
 }
+
+.title {
+  @apply text-9xl uppercase leading-[1.0] font-extrabold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* @apply leading-tight; */
+}
+
+h1 {
+  @apply text-8xl font-bold text-slate-300 leading-tight;
+}
+
+h2 {
+  @apply text-[80px];
+}
+
+h3 {
+  @apply text-[3.5rem];
+}
+
+h3 {
+}
+
+/* Responsive Design */
+/* sm */
+@media (max-width: 640px) {
+  .title {
+    @apply text-5xl;
+  }
+
+  h1 {
+    @apply text-[2.5rem];
+  }
+
+  h2 {
+    @apply text-[28px];
+  }
+
+  /* h3 {
+    @apply text-[28px];
+  } */
+}
+
+/* md */
+@media (min-width: 768px) {
+}
+
+/* lg */
+@media (min-width: 1024px) {
+}
+
+/* xl */
+@media (min-width: 1280px) {
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+}

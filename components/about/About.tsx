@@ -46,7 +46,7 @@ const About = () => {
           </div>
 
           <div className="w-full p-6 text-slate-500 text-lg bg-gray-900 border border-gray-800 rounded-xl space-y-8 md:space-y-6">
-            <h3 className="text-base text-white font-semi  flex justify-between items-center">
+            <h3 className="text-base text-white font-semi flex justify-between items-center">
               <span className="uppercase">Experience</span>
               <span className="text-xs py-1 px-2.5 leading-base bg-indigo-500 rounded-full">
                 4.5+ yrs

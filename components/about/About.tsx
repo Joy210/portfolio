@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import Heading from "../Heading";
+import { educationHistory, workHistoryList } from "../data/aboutTextsData";
 import AdobeXD from "../svg/AdobeXD";
 import Figma from "../svg/Figma";
 import Framer from "../svg/Framer";
@@ -9,16 +10,15 @@ import Illustrator from "../svg/Illustrator";
 import Miro from "../svg/Miro";
 import Photoshop from "../svg/Photoshop";
 import Spline from "../svg/Spline";
-import { educationHistory, workHistoryList } from "../data/aboutTextsData";
 
 const About = () => {
   return (
-    <div className="bg-slate-950 py-120">
-      <div className="container mx-auto space-y-14">
+    <div className="bg-slate-950 py-12 md:py-120">
+      <div className="container space-y-8 md:space-y-14">
         <Heading text1="info." text2="about me" bgDark />
 
-        <div className="inline-grid grid-cols-3 gap-8">
-          <div className="w-full p-6 text-slate-500 text-lg bg-gray-900 border border-gray-800 rounded-2xl">
+        <div className="inline-grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+          <div className="w-full p-5 md:p-6 text-slate-500 text-sm md:text-lg leading-normal bg-gray-900 border border-gray-800 rounded-2xl">
             {highlightedText(`✨ Strong commitment to collaboration and solutions-oriented
               problem-solving ✨`)}
             Use various web design software to develop
@@ -27,7 +27,7 @@ const About = () => {
             experience, usability and speed for multiple types of end-users.
           </div>
 
-          <div className="row-span-2 w-full h-[445px] p-6 text-slate-500 text-lg bg-gray-900 border border-gray-800 rounded-xl relative">
+          <div className="order-first md:order-none row-span-2 w-full h-[340px] md:h-[445px] p-6 text-slate-500 text-lg bg-gray-900 border border-gray-800 rounded-xl relative">
             <Image
               className="w-auto h-full object-contain"
               src={"/assets/author_lg.png"}
@@ -45,7 +45,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="w-full p-6 text-slate-500 text-lg bg-gray-900 border border-gray-800 rounded-xl space-y-6">
+          <div className="w-full p-6 text-slate-500 text-lg bg-gray-900 border border-gray-800 rounded-xl space-y-8 md:space-y-6">
             <h3 className="text-base text-white font-semi  flex justify-between items-center">
               <span className="uppercase">Experience</span>
               <span className="text-xs py-1 px-2.5 leading-base bg-indigo-500 rounded-full">
@@ -73,7 +73,8 @@ const About = () => {
             </div>
           </div>
 
-          <div className="w-full p-6 text-slate-500 text-lg bg-gray-900 border border-gray-800 rounded-xl space-y-6">
+          {/* Eucation Card Start */}
+          <div className="w-full p-6 text-slate-500 text-lg bg-gray-900 border border-gray-800 rounded-xl space-y-6 hidden md:block">
             <h3 className="text-base text-white uppercase font-semi">
               Education
             </h3>
@@ -85,6 +86,23 @@ const About = () => {
               url={educationHistory.url}
             />
           </div>
+
+          {/* ================== */}
+
+          <div className="w-full p-6 text-slate-500 text-lg bg-gray-900 border border-gray-800 rounded-xl space-y-6 md:hidden">
+            <h3 className="text-base text-white uppercase font-semi">
+              Education
+            </h3>
+
+            <LinkComponent
+              title={educationHistory.title}
+              organization={educationHistory.institution}
+              duration={educationHistory.duration}
+              url={educationHistory.url}
+              isEducation
+            />
+          </div>
+          {/* Eucation Card Start */}
 
           <div className="w-full p-6 text-slate-500 text-lg bg-gray-900 border border-gray-800 rounded-xl space-y-6">
             <h3 className="text-base text-white uppercase font-semi">
@@ -120,6 +138,7 @@ type LinkComponentProps = {
   duration: string;
   url: string;
   className?: string;
+  isEducation?: boolean;
 };
 
 // Link Component
@@ -129,26 +148,58 @@ const LinkComponent: FC<LinkComponentProps> = ({
   duration,
   url,
   className,
+  isEducation,
 }) => {
   return (
     <>
-      <Link
-        href={url}
-        target="_blank"
-        className={`block space-y-1 group ease-in-out ${className}`}
-      >
-        <div className="flex items-center justify-between">
-          <h4 className="text-sm text-slate-300 group-hover:text-white duration-300">
-            {title}
-          </h4>
-          <span className="text-[11px] leading-none">{duration}</span>
-        </div>
+      {isEducation ? (
+        <Link
+          href={url}
+          target="_blank"
+          className={`block group ease-in-out ${className} ${
+            isEducation ? "space-y-3" : "space-y-1"
+          }`}
+        >
+          <div
+            className={`flex ${
+              isEducation
+                ? "flex-col justify-start gap-1"
+                : "items-center justify-between"
+            }`}
+          >
+            <h4 className="text-sm text-slate-300 group-hover:text-white duration-300">
+              {title}
+            </h4>
 
-        <p className="text-xs flex items-center gap-0.5 group-hover:text-indigo-400 group-hover:translate-x-1 duration-300">
-          <span className="group-hover:underline">{organization}</span>
-          <i className="ri-arrow-right-up-line text-base leading-none"></i>
-        </p>
-      </Link>
+            <p className="text-xs flex items-center gap-0.5 group-hover:text-indigo-400 group-hover:translate-x-1 duration-300">
+              <span className="group-hover:underline">{organization}</span>
+              <i className="ri-arrow-right-up-line text-base leading-none"></i>
+            </p>
+          </div>
+
+          <p className="text-[9px] md:text-[11px] leading-none">{duration}</p>
+        </Link>
+      ) : (
+        <Link
+          href={url}
+          target="_blank"
+          className={`block space-y-1 group ease-in-out ${className}`}
+        >
+          <div className="flex items-center justify-between">
+            <h4 className="text-sm text-slate-300 group-hover:text-white duration-300">
+              {title}
+            </h4>
+            <span className="text-[9px] md:text-[11px] leading-none">
+              {duration}
+            </span>
+          </div>
+
+          <p className="text-xs flex items-center gap-0.5 group-hover:text-indigo-400 group-hover:translate-x-1 duration-300">
+            <span className="group-hover:underline">{organization}</span>
+            <i className="ri-arrow-right-up-line text-base leading-none"></i>
+          </p>
+        </Link>
+      )}
 
       {/* <div className="divider w-full h-[1px] bg-white bg-opacity-5"></div> */}
     </>

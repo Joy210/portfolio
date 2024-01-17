@@ -57,18 +57,20 @@ const Navabar = () => {
             <ButtonLink name="My Resume" url={resumeURL} isIcon={true} />
           </div>
 
-          <Link
-            href={resumeURL}
-            target="_blank"
-            className={`group ml-2 h-10 pl-[16px] pr-[12px] gap-1 font-medium bg-slate-900 text-white rounded-full inline-flex items-center hover:bg-indigo-500 ease-in-out duration-300 text-xs`}
-          >
-            <span> My Resume </span>
-            <span
-              className={`flex item-center justify-center font-semibold text-base`}
+          <div className="md:hidden">
+            <Link
+              href={resumeURL}
+              target="_blank"
+              className={`group ml-2 h-10 pl-[16px] pr-[12px] gap-1 font-medium bg-slate-900 text-white rounded-full inline-flex items-center hover:bg-indigo-500 ease-in-out duration-300 text-xs`}
             >
-              <i className={`ri-arrow-right-up-line`} />
-            </span>
-          </Link>
+              <span> My Resume </span>
+              <span
+                className={`flex item-center justify-center font-semibold text-base`}
+              >
+                <i className={`ri-arrow-right-up-line`} />
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

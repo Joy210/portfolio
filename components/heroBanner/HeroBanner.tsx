@@ -6,7 +6,7 @@ import HeaderCircle from "../svg/HeaderCircle";
 
 const HeroBanner = () => {
   return (
-    <div className="bg-slate-100 py-12 md:pt-24 md:pb-32 relative">
+    <div className="bg-slate-100 py-12 md:py-24 relative">
       <div className="container">
         <div className="relative space-y-4 md:space-y-8 z-10">
           {/* desktop version start */}

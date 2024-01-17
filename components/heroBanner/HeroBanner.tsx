@@ -2,13 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import MousePointer from "../MousePointer";
 import { whatsappLink } from "../data/heroBannerData";
+import HeaderCircle from "../svg/HeaderCircle";
 
 const HeroBanner = () => {
   return (
-    <div className="bg-slate-100 pt-24 pb-32 relative">
-      <div className="container mx-auto">
-        <div className="relative space-y-8 z-10">
-          <div className="text-8xl font-bold text-slate-300 leading-tight space-y-0.5">
+    <div className="bg-slate-100 py-12 md:pt-24 md:pb-32 relative">
+      <div className="container">
+        <div className="relative space-y-4 md:space-y-8 z-10">
+          {/* desktop version start */}
+          <div className="hidden md:block space-y-0.5">
             <h1 className="flex items-center pl-28 space-x-6">
               <span> Hi 👋, I’m </span>
               <span className="text-indigo-500"> Joy </span>
@@ -35,32 +37,63 @@ const HeroBanner = () => {
               <span> for all design needs. </span>
             </h1>
           </div>
+          {/* desktop version end */}
 
-          <div className="grid grid-cols-6 gap-8 items-start">
-            <div className="flex items-center py-3">
-              <span className="w-2 h-2 rounded-full bg-slate-200"></span>
-              <span className="grow h-0.5 bg-slate-200"></span>
-              <span className="w-2 h-2 rounded-full bg-slate-200"></span>
-              <span className="grow h-0.5 bg-slate-200"></span>
-              <span className="w-2 h-2 rounded-full bg-slate-200"></span>
+          {/* mobile version start */}
+          <div className="visible md:hidden space-y-0.5">
+            <h1 className="">
+              <span> Hi 👋,</span>
+            </h1>
+
+            <h1 className="text-slate-900 text-[64px]">
+              <span> I&apos;m </span>
+              <span className="text-indigo-500"> Joy </span>
+            </h1>
+
+            <div className="-space-y-[2.4px] m-0">
+              <h1 className="flex items-center">
+                <span> oneStop</span>
+                <span> ✨ </span>
+              </h1>
+
+              <h1 className="flex items-center space-x-1.5">
+                <span className="text-slate-900"> creative</span>
+                <span> person </span>
+              </h1>
+
+              <h1 className="flex items-center space-x-1.5">
+                <span> for all </span>
+                <span className="text-slate-900"> design </span>
+              </h1>
+
+              <h1 className="flex items-center"> needs. </h1>
+            </div>
+          </div>
+          {/* mobile version end */}
+
+          <div className="md:grid md:grid-cols-6 md:gap-8 items-start">
+            <div className="hidden md:block">
+              <div className="flex items-center py-3">
+                <span className="w-2 h-2 rounded-full bg-slate-200"></span>
+                <span className="grow h-0.5 bg-slate-200"></span>
+                <span className="w-2 h-2 rounded-full bg-slate-200"></span>
+                <span className="grow h-0.5 bg-slate-200"></span>
+                <span className="w-2 h-2 rounded-full bg-slate-200"></span>
+              </div>
             </div>
 
-            <div className="col-span-4 px-1 space-y-12">
-              <p className="text-slate-600 text-xl font-light leading-relaxed">
-                I am a multi-disciplinary creative
+            <div className="md:col-span-4 md:px-1 md:space-y-12  space-y-6">
+              <p className="text-slate-600 text-sm md:text-xl font-light leading-relaxed">
+                I am a multi-disciplinary creative{" "}
                 <span className="font-semibold text-slate-800">
-                  {" "}
-                  Product Designer{" "}
-                </span>
-                and solution provider, boasting nearly
-                <span className="font-semibold text-slate-800">
-                  {" "}
-                  4.5+ years{" "}
-                </span>
+                  Product Designer
+                </span>{" "}
+                and solution provider, boasting nearly{" "}
+                <span className="font-semibold text-slate-800">4.5+ years</span>{" "}
                 of extensive experience in the creative industry.
               </p>
 
-              <div className="flex gap-10">
+              <div className="flex flex-col md:flex-row gap-6 md:gap-10">
                 <Link
                   href={whatsappLink}
                   target="_blank"
@@ -82,12 +115,14 @@ const HeroBanner = () => {
                   </div>
                 </Link>
 
-                <div className="flex flex-col items-center gap-1 py-0.5">
-                  <span className="grow w-0.5 bg-slate-200"></span>
-                  <span className="uppercase text-[10px] font-semibold text-slate-400 leading-none">
-                    or
-                  </span>
-                  <span className="grow w-0.5 bg-slate-200"></span>
+                <div className="hidden md:block h-12">
+                  <div className="flex flex-col items-center gap-1 py-0.5 h-full">
+                    <span className="grow w-0.5 bg-slate-200"></span>
+                    <span className="uppercase text-[10px] font-semibold text-slate-400 leading-none">
+                      or
+                    </span>
+                    <span className="grow w-0.5 bg-slate-200"></span>
+                  </div>
                 </div>
 
                 <Link
@@ -119,17 +154,19 @@ const HeroBanner = () => {
       </div>
 
       {/* Circle BG Shape */}
-      <Image
+      {/* <Image
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 m-0 z-0"
         src={"/assets/bg_circle_shape.png"}
         alt="BG Circle Shape"
         width={500}
         height={500}
         priority={false}
-      />
+      /> */}
+
+      <HeaderCircle className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 m-0 z-0" />
       {/* Circle BG Shape */}
 
-      <div className="mouse-pointer absolute top-40 left-1/2 z-10 pl-44 pt-2">
+      <div className="mouse-pointer absolute top-[164px] md:top-40 md:left-1/2 z-10 pl-48 md:pl-44 pt-2">
         <MousePointer
           fill="#F43F5E"
           textColor="text-white"

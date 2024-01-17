@@ -163,7 +163,7 @@ const HeroBanner = () => {
         priority={false}
       /> */}
 
-      <HeaderCircle className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 m-0 z-0" />
+      <HeaderCircle className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 m-0 z-0" />
       {/* Circle BG Shape */}
 
       <div className="mouse-pointer absolute top-[164px] md:top-40 md:left-1/2 z-10 pl-48 md:pl-44 pt-2">

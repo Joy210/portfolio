@@ -1,3 +1,4 @@
+import { RiArrowRightUpLine, RiCopyrightLine } from "@remixicon/react";
 import Link from "next/link";
 import ButtonLink from "./Button";
 import { menuItem } from "./data/navbarData";
@@ -20,14 +21,20 @@ const Contact = () => {
               sohanoor404@gmail.com
             </p>
 
-            <ButtonLink name="Book a Call" url="" isIcon={true} />
+            <div className="hidden md:block">
+              <ButtonLink name="Book a Call" url="" isIcon={true} isLarge />
+            </div>
+
+            <div className="sm:hidden">
+              <ButtonLink name="Book a Call" url="" isIcon={true} />
+            </div>
           </div>
 
           {/* Copyright section start */}
-          <div className="copyright flex items-center justify-between text-xs md:text-base">
-            <div className="flex items-center space-x-1 text-slate-60 mx-auto md:mx-0">
-              <i className="ri-copyright-line"></i>
-              <p>2023 Portfolio by Sohanur Rahman</p>
+          <div className="copyright flex items-center justify-between text-xs md:text-base text-slate-600">
+            <div className="flex items-center text-slate-60 mx-auto md:mx-0">
+              <RiCopyrightLine size={18} />
+              2023 Portfolio by Sohanur Rahman
             </div>
 
             <div className="hidden md:block">
@@ -41,11 +48,10 @@ const Contact = () => {
                       <Link
                         href={url}
                         target="_blank"
-                        className="flex items-center justify-center text-slate-600 hover:text-indigo-500 leading-5"
+                        className="flex items-center justify-center hover:text-indigo-500 leading-5"
                       >
-                        <span className="menu-name"> {name} </span>
-
-                        <i className="ri-arrow-right-up-line text-[20px]" />
+                        {name}
+                        <RiArrowRightUpLine size={22} />
                       </Link>
                     </li>
                   );

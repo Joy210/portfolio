@@ -13,7 +13,7 @@ export const workHistoryList = [
     duration: "Apr 2020 - Aug 2022",
   },
   {
-    designation: "Product Designer",
+    designation: "Jr. Ux/UI Designer",
     company: "CreativeSoft Technology",
     url: "https://creativesofttechnology.com",
     duration: "May 2019 - Mar 2020",

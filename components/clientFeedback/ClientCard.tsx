@@ -13,10 +13,10 @@ const ClientCard: FC<FeedbackDataProps> = ({ data }) => {
         {data.quote}
       </p>
 
-      <div className="space-y-1 md:space-y-1.5">
-        <h5 className="text-sm md:text-xl font-semibold text-slate-900">
+      <div className="space-y-1 md:space-y-1">
+        <p className="text-sm md:text-xl font-semibold text-slate-900">
           {data.name}
-        </h5>
+        </p>
         <p className=" text-xs md:text-base"> {data.location} </p>
       </div>
     </div>

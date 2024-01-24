@@ -1,3 +1,4 @@
+import { RiArrowRightUpLine } from "@remixicon/react";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
@@ -18,21 +19,25 @@ const About = () => {
         <Heading text1="info." text2="about me" bgDark />
 
         <div className="inline-grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-          <div className="w-full p-5 md:p-6 text-slate-500 text-sm md:text-lg leading-normal bg-gray-900 border border-gray-800 rounded-2xl">
-            {highlightedText(`✨ Strong commitment to collaboration and solutions-oriented
+          <div className="w-full p-5 md:p-6 bg-gray-900 border border-gray-800 rounded-2xl">
+            <p className="text-slate-500 text-sm md:text-lg leading-normal mb-0">
+              {highlightedText(`✨ Strong commitment to collaboration and solutions-oriented
               problem-solving ✨`)}
-            Use various web design software to develop
-            {highlightedText(`customer-focused`)} websites and designs.
-            Committed to {highlightedText(`high standards`)} of web design, user
-            experience, usability and speed for multiple types of end-users.
+              Use various web design software to develop
+              {highlightedText(`customer-focused`)} websites and designs.
+              Committed to {highlightedText(`high standards`)} of web design,
+              user experience, usability and speed for multiple types of
+              end-users.
+            </p>
           </div>
 
           <div className="order-first md:order-none row-span-2 w-full h-[340px] md:h-[445px] p-6 text-slate-500 text-lg bg-gray-900 border border-gray-800 rounded-xl relative">
             <Image
               className="w-auto h-full object-contain"
-              src={"/assets/author_lg.png"}
+              src={"/assets/author_lg.webp"}
               alt="Author Image"
               fill
+              sizes="width: 100%, height: 100%"
             />
 
             <div className="text-white absolute bottom-6 space-y-2">
@@ -173,11 +178,13 @@ const LinkComponent: FC<LinkComponentProps> = ({
 
             <p className="text-xs flex items-center gap-0.5 group-hover:text-indigo-400 group-hover:translate-x-1 duration-300">
               <span className="group-hover:underline">{organization}</span>
-              <i className="ri-arrow-right-up-line text-base leading-none"></i>
+              <RiArrowRightUpLine size={16} />
             </p>
           </div>
 
-          <p className="text-[9px] md:text-[11px] leading-none">{duration}</p>
+          <p className="text-[10px] md:text-[11px] leading-none text-slate-400 font-light">
+            {duration}
+          </p>
         </Link>
       ) : (
         <Link
@@ -189,14 +196,14 @@ const LinkComponent: FC<LinkComponentProps> = ({
             <h4 className="text-sm text-slate-300 group-hover:text-white duration-300">
               {title}
             </h4>
-            <span className="text-[9px] md:text-[11px] leading-none">
+            <span className="text-[10px] md:text-[11px] leading-none text-slate-400 font-light">
               {duration}
             </span>
           </div>
 
           <p className="text-xs flex items-center gap-0.5 group-hover:text-indigo-400 group-hover:translate-x-1 duration-300">
             <span className="group-hover:underline">{organization}</span>
-            <i className="ri-arrow-right-up-line text-base leading-none"></i>
+            <RiArrowRightUpLine size={16} />
           </p>
         </Link>
       )}

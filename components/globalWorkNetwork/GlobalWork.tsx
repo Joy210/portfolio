@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { cityCount, destinationData } from "../data/destinationData";
 import MapSvg from "../svg/mapSvg";
 
@@ -23,15 +24,29 @@ const GlobalWork = () => {
         </div>
 
         <div className="flex justify-center">
-          <MapSvg />
+          {/* <MapSvg /> */}
+          <Image
+            className="w-full md:w-11/12 h-auto"
+            src={"/assets/Map.svg"}
+            alt="map"
+            loading="lazy"
+            // layout="fill"
+            // objectFit="contain"
+            // sizes="100vw"
+            // width={328}
+            // height={164}
+            width={0}
+            height={0}
+          />
+          {/* <img src="/assets/Map.svg" alt="map" /> */}
         </div>
 
-        <div className="text-slate-300 mx-auto text-center text-[3.5rem] font-extrabold leading-tight uppercase">
-          <h2> Collaborating </h2>
-          <h2>
+        <div className="text-slate-300 mx-auto text-center text-[28px] md:text-[56px] font-extrabold leading-tight uppercase">
+          <h4> Collaborating </h4>
+          <h4>
             Across <span className="text-slate-900"> {cityCount}+ Global </span>
-          </h2>
-          <h2 className="text-slate-900"> Destinations </h2>
+          </h4>
+          <h4 className="text-slate-900"> Destinations </h4>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ import Navabar from "../../components/navbar/Navabar";
 import RecentExploration from "../../components/recentExploration/RecentExploration";
 import SelectedWork from "../../components/selectedWork/SelectedWork";
 
-export default function Home() {
+const Home = () => {
   return (
     <main className="wrapper">
       <Navabar />
@@ -32,4 +32,6 @@ export default function Home() {
       <Contact />
     </main>
   );
-}
+};
+
+export default Home;

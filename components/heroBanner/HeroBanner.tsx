@@ -1,18 +1,24 @@
+import {
+  RiArrowRightUpLine,
+  RiCalendar2Fill,
+  RiWhatsappFill,
+} from "@remixicon/react";
 import Image from "next/image";
 import Link from "next/link";
 import MousePointer from "../MousePointer";
-import { whatsappLink } from "../data/heroBannerData";
+import { calendlyLink, whatsappLink } from "../data/heroBannerData";
 import HeaderCircle from "../svg/HeaderCircle";
 
 const HeroBanner = () => {
   return (
-    <div className="bg-slate-100 py-12 md:py-24 relative">
+    <div className="bg-slate-50 py-12 md:py-24 relative">
       <div className="container">
         <div className="relative space-y-4 md:space-y-8 z-10">
           {/* desktop version start */}
           <div className="hidden md:block space-y-0.5">
             <h1 className="flex items-center pl-28 space-x-6">
               <span> Hi 👋, I’m </span>
+
               <span className="text-indigo-500"> Joy </span>
               <span>
                 <Image
@@ -33,17 +39,13 @@ const HeroBanner = () => {
               <span> person </span>
             </h1>
 
-            <h1 className="flex items-center space-x-5 pl-56">
-              <span> for all design needs. </span>
-            </h1>
+            <h1 className="pl-56">for all design needs.</h1>
           </div>
           {/* desktop version end */}
 
           {/* mobile version start */}
           <div className="visible md:hidden space-y-0.5">
-            <h1 className="">
-              <span> Hi 👋,</span>
-            </h1>
+            <h1>Hi 👋,</h1>
 
             <h1 className="text-slate-900 text-[64px]">
               <span> I&apos;m </span>
@@ -66,7 +68,7 @@ const HeroBanner = () => {
                 <span className="text-slate-900"> design </span>
               </h1>
 
-              <h1 className="flex items-center"> needs. </h1>
+              <h1> needs. </h1>
             </div>
           </div>
           {/* mobile version end */}
@@ -100,14 +102,13 @@ const HeroBanner = () => {
                   className="flex items-center gap-4 transform translate-y-0 hover:-translate-y-2 ease-in-out duration-300 group"
                 >
                   <div className="w-12 h-12 bg-emerald-100 text-emerald-500 rounded-xl flex items-center justify-center text-2xl border border-emerald-200 group-hover:bg-emerald-500 group-hover:text-white group-hover:border-emerald-500 duration-300 ease-in-out">
-                    <i className="ri-whatsapp-fill animate-pulse"></i>
+                    <RiWhatsappFill className="animate-pulse" />
                   </div>
 
                   <div className="content text-slate-500 pt-0.5">
                     <p className="flex items-center text-emerald-500 font-semi">
-                      <span className="menu-name "> Whatsapp </span>
-
-                      <i className="ri-arrow-right-up-line text-2xl leading-none" />
+                      Whatsapp
+                      <RiArrowRightUpLine size={22} />
                     </p>
                     <p className="text-sm leading-normal font-light">
                       Chat Real-Time
@@ -126,19 +127,18 @@ const HeroBanner = () => {
                 </div>
 
                 <Link
-                  href={"/"}
+                  href={calendlyLink}
                   target="_blank"
                   className="flex items-center gap-4 transform translate-y-0 hover:-translate-y-2 ease-in-out duration-300 group"
                 >
                   <div className="w-12 h-12 bg-indigo-100 text-indigo-500 rounded-xl flex items-center justify-center text-2xl border border-indigo-200 group-hover:bg-indigo-500 group-hover:text-white group-hover:border-indigo-500 duration-300 ease-in-out">
-                    <i className="ri-calendar-fill text-xl animate-pulse"></i>
+                    <RiCalendar2Fill size={22} />
                   </div>
 
                   <div className="content text-slate-500 pt-0.5">
                     <p className="flex items-center text-indigo-500 font-semi">
-                      <span className="menu-name"> Book a Call </span>
-
-                      <i className="ri-arrow-right-up-line text-2xl leading-none" />
+                      Book a Call
+                      <RiArrowRightUpLine size={22} />
                     </p>
                     <p className="text-sm leading-normal font-light">
                       Schedule a metting

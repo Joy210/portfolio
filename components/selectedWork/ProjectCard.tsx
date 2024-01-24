@@ -16,14 +16,14 @@ const ProjectCard: FC<ProjectCardProps> = ({ url, title, tag, imageURL }) => {
       target="_blank"
       className="space-y-4 md:space-y-6 group ease-in-out duration-300 w-full"
     >
-      <div className="relative w-full h-[340px] md:h-[560px] bg-slate-800 rounded-2xl overflow-hidden">
+      <div className="relative w-full h-[380px] md:h-[560px] bg-slate-800 rounded-2xl overflow-hidden">
         <Image
           className="object-cover w-full h-full group-hover:scale-110 duration-300"
           src={imageURL}
-          alt="Case Study"
+          alt={title}
           fill
           priority={false}
-          quality={100}
+          quality={80}
           loading="lazy"
         />
       </div>
@@ -32,7 +32,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ url, title, tag, imageURL }) => {
         <h2 className="text-xl md:text-2xl font-semi group-hover:text-indigo-400">
           {title}
         </h2>
-        <p className="text-sm md:text-base text-slate-500 font-light">{tag}</p>
+        <p className="text-sm md:text-base text-slate-400 font-light">{tag}</p>
       </div>
     </Link>
   );

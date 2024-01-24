@@ -16,7 +16,7 @@ const ClientsFeedback = () => {
         <Heading text1="Clients" text2="Feedback" />
 
         <div className="md:w-[960px] mx-auto relativ space-y-4 md:space-y-10">
-          <Quote className="h-8 w-8" />
+          <Quote className="h-8 w-8 md:h-16 md:w-16" />
 
           <Swiper
             spaceBetween={56}

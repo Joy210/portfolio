@@ -42,11 +42,11 @@ const MousePointer: FC<MousePointerProps> = ({
         />
       </svg>
 
-      <h6
+      <p
         className={`py-1.5 px-2.5 text-nowrap ${textBgColor} rounded-lg text-xs ${textColor} absolute left-5 -bottom-5 -ml-0.5 mb-0.5`}
       >
         {text}
-      </h6>
+      </p>
     </div>
   );
 };

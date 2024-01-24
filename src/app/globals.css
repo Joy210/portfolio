@@ -26,6 +26,7 @@ body {
     rgb(var(--background-start-rgb)); */
 
   /* font-size: 14px; */
+  scroll-behavior: smooth;
 }
 
 .lh-120 {
@@ -95,3 +96,87 @@ h3 {
 /* 2xl */
 @media (min-width: 1536px) {
 }
+
+/* ============== animate from right ============= */
+
+/* .scroll {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #fff 20%,
+    #fff 80%,
+    transparent
+  );
+} */
+
+.scroll .fromRight {
+  animation: rightToLeft var(--time) linear infinite;
+  animation-delay: calc(var(--time) * -1);
+}
+
+.scroll .fromRight:nth-child(2) {
+  animation: rightToLeft2 var(--time) linear infinite;
+  animation-delay: calc(var(--time) / -2);
+}
+
+@keyframes rightToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes rightToLeft2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+/* ============== animate from left ============= */
+.scroll .fromLeft {
+  animation: leftToRight var(--time) linear infinite;
+  animation-delay: calc(var(--time) * -1);
+}
+
+.scroll .fromLeft:nth-child(2) {
+  animation: leftToRight2 var(--time) linear infinite;
+  animation-delay: calc(var(--time) / -2);
+}
+
+@keyframes leftToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes leftToRight2 {
+  0% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* .scroll .fromRight:hover,
+.scroll .fromRight:nth-child(2):hover,
+.scroll .fromLeft:hover,
+.scroll .fromLeft:nth-child(2):hover {
+  animation-play-state: paused;
+} */
+
+/* .scroll img {
+  max-width: 360px;
+} */

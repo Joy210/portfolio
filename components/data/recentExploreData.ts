@@ -22,11 +22,11 @@ export const recentExploreData = [
   },
   {
     title: "explore",
-    imgURL: "/assets/explore6.png",
+    imgURL: "/assets/explore6.webp",
   },
   {
     title: "explore",
-    imgURL: "/assets/explore7.png",
+    imgURL: "/assets/explore7.webp",
   },
 ];
 
@@ -54,10 +54,10 @@ export const recentExploreData2 = [
   },
   {
     title: "explore",
-    imgURL: "/assets/explore6.png",
+    imgURL: "/assets/explore6.webp",
   },
   {
     title: "explore",
-    imgURL: "/assets/explore7.png",
+    imgURL: "/assets/explore7.webp",
   },
 ];

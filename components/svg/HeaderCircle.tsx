@@ -25,9 +25,9 @@ const HeaderCircle: FC<HeaderCircleProps> = ({ className }) => {
           width="580"
           height="580"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -47,7 +47,7 @@ const HeaderCircle: FC<HeaderCircleProps> = ({ className }) => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(290 290) rotate(90) scale(250)"
         >
-          <stop stop-color="white" />
+          <stop stopColor="white" />
         </radialGradient>
       </defs>
     </svg>

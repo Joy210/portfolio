@@ -1,27 +1,27 @@
 // Project list data
 export const projectList = [
   {
-    url: "https://dribbble.com/joy210",
+    url: "https://sharetrip.net",
     title: "ShareTrip Redesign",
     tag: "Website & Mobile Design",
-    imageURL: "/assets/explore2.jpg",
+    imageURL: "/assets/ShareTrip_1.jpg",
+  },
+  {
+    url: "http://petraui.com",
+    title: "Petra UI",
+    tag: "Icon Design, Website Design",
+    imageURL: "/assets/PetraUI_1.jpg",
   },
   {
     url: "https://dribbble.com/joy210",
-    title: "Diabio Web Design",
-    tag: "Mobile Design",
-    imageURL: "/assets/explore6.png",
+    title: "Cypto Currency App Design",
+    tag: "Mobile App Design",
+    imageURL: "/assets/Crypto_App_1.jpg",
   },
   {
     url: "https://dribbble.com/joy210",
-    title: "Level Up Sports Recovery",
+    title: "ExitFrog (Internal Learning Platform)",
     tag: "Website Design",
-    imageURL: "/assets/explore7.png",
-  },
-  {
-    url: "https://dribbble.com/joy210",
-    title: "Crypto Curency App Design",
-    tag: "Mobile Design",
-    imageURL: "/assets/explore3.jpg",
+    imageURL: "/assets/ExitFrog.jpg",
   },
 ];

@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
@@ -21,13 +22,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <link
           href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
           rel="stylesheet"
         />
-      </head>
-      <body className={font.className}>{children}</body>
+      </head> */}
+      <body className={font.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

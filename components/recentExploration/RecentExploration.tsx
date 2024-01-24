@@ -1,9 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { highlightedText } from "../about/About";
-import {
-  recentExploreData,
-  recentExploreData2,
-} from "../data/recentExploreData";
+import ImageSlider from "./ImageSlider";
 
 const RecentExploration = () => {
   return (
@@ -16,72 +13,12 @@ const RecentExploration = () => {
         </div>
       </div>
 
-      <div className="space-y-2 md:space-y-8">
+      <div className="space-y-2 md:space-y-2">
         {/* slide to right */}
-        <div className="relative flex overflow-x-hidden space-x-8">
-          <div className=" animate-imageSlider whitespace-nowrap flex items-center gap-2 md:gap-8">
-            {recentExploreData.map(({ title, imgURL }, i) => (
-              <div
-                className="min-w-[148px] md:min-w-[380px] h-[100px] md:h-[280px] rounded-xl overflow-hidden border border-slate-900"
-                key={i}
-              >
-                <img
-                  src={imgURL}
-                  alt={title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-
-          <div className="absolute top-0 animate-imageSlider2 whitespace-nowrap flex items-center gap-2 md:gap-8">
-            {recentExploreData.map(({ title, imgURL }, i) => (
-              <div
-                className="min-w-[148px] md:min-w-[380px] h-[100px] md:h-[280px] rounded-xl overflow-hidden border border-slate-900"
-                key={i}
-              >
-                <img
-                  src={imgURL}
-                  alt={title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <ImageSlider duration="80" fromRight />
 
         {/* slide to left */}
-        <div className="relative flex overflow-x-hidden space-x-8">
-          <div className=" animate-slidetoright whitespace-nowrap flex items-center gap-2 md:gap-8">
-            {recentExploreData2.map(({ title, imgURL }, i) => (
-              <div
-                className="min-w-[200px] h-[148px] md:min-w-[380px] md:h-[280px] rounded-xl overflow-hidden border border-slate-900"
-                key={i}
-              >
-                <img
-                  src={imgURL}
-                  alt={title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-
-          <div className="absolute top-0 animate-slidetoright2 whitespace-nowrap flex items-center gap-2 md:gap-8">
-            {recentExploreData2.map(({ title, imgURL }, i) => (
-              <div
-                className="min-w-[200px] h-[148px] md:min-w-[380px] md:h-[280px] rounded-xl overflow-hidden border border-slate-900"
-                key={i}
-              >
-                <img
-                  src={imgURL}
-                  alt={title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <ImageSlider duration="120" fromLeft />
       </div>
     </div>
   );
